@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "MAGIC HOOVER",
+    "short_name": "MAGIC HOOVER",
+    "start_url": "http://192.168.4.1",
+    "display": "standalone",
+    "orientation": "portrait",
+    "select": "none",
+    "background_color": "#ffffff",
+    "description": "Démarrage automatique d'aspirateur de chantier",
+    "lang": "fr",
+    "theme_color": "#04aa6d",
+    "icons": [
+        {
+            "src": "./img/32-magic_hoover.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/64-magic_hoover.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/128-magic_hoover.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/256-magic_hoover.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ]
+}

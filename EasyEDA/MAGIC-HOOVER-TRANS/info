@@ -1,0 +1,279 @@
+{
+  "uuid": "3149c511aec660799caf1891edcabc63",
+  "path": "Offline/MAGIC-HOOVER-TRANS",
+  "name": "MAGIC-HOOVER-TRANS",
+  "content": "",
+  "created_at": "2024-09-28 11:30:44",
+  "updated_at": "2024-10-13 23:45:20",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "09499188d8bc4a422eacfaef28221ca1",
+      "title": "SCHEMA-MAGIC-HOOVER-TRANS",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7a2faf02889040879843b86b9aea3213": 1,
+        "8d6a6e18d8914b44b75722cf8d982e33": 1,
+        "249a490b53704f34855718a2cb609531": 1,
+        "fcf764f6323c46179304d985d269f7d9": 1,
+        "b3baa36d07004a7bb79aea61f5d647d6": 1,
+        "84e0c5152ce34d3cac3cba16e1b8c442": 1,
+        "618f5eec3ee64bfdbe7bfa8a97c47876": 3,
+        "f2dc2eecc4e549fabb0e31ba10a17ca8": 1,
+        "78fe267f503241ca8c0020c43cac50df": 4,
+        "02f414c4b52a41c3a754229a031016f4": 1,
+        "49066712dd06965b88d38c6cfba1611d": 1,
+        "04001e34d0014329a8269c8aa7ef5ea2": 1,
+        "24ad35e9a949472595ab01b698598b07": 1,
+        "5a642cf3545a4896936f125df4d00806": 1,
+        "4d73eaea274a48f8986194578f856558": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "10nF-50V",
+          1,
+          "C1206",
+          "C1",
+          {
+            "Manufacturer Part": "C1206X103K050T",
+            "Manufacturer": "IHHEC(禾伸堂)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C106016"
+          }
+        ],
+        [
+          "220uF",
+          1,
+          "CAP-TH_BD5.0-P2.00-D0.8-FD",
+          "C2",
+          {
+            "Manufacturer Part": "KM227M010D11RR0VH2FP0",
+            "Manufacturer": "CX(承兴)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C43319"
+          }
+        ],
+        [
+          "100nF",
+          1,
+          "CAP-TH_L18.0-W7.0-P15.00-D0.7",
+          "C3",
+          {
+            "Manufacturer Part": "X2-104K-275VAC",
+            "Manufacturer": "NDF(达孚)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C914484"
+          }
+        ],
+        [
+          "EE8.3-12MH*0.15*85TS",
+          1,
+          "FILTER-TH_EE8.3-12MHX0.15X85TS",
+          "FT1",
+          {
+            "Manufacturer Part": "EE8.3-12MH*0.15*85TS",
+            "Manufacturer": "增益",
+            "Supplier": "LCSC",
+            "Supplier Part": "C7437510"
+          }
+        ],
+        [
+          "PAD",
+          4,
+          "PADPAD",
+          "N-IN,N-OUT,PH-IN,PH-OUT",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "20kΩ",
+          1,
+          "R1206",
+          "R1",
+          {
+            "Manufacturer Part": "PTFR1206B20K0P9",
+            "Manufacturer": "RESI(开步睿思)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C351480"
+          }
+        ],
+        [
+          "10kΩ",
+          2,
+          "R1206",
+          "R2,R4",
+          {
+            "Manufacturer Part": "QR1206J10K0P05Z",
+            "Manufacturer": "EVER OHMS(天二科技)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C176266"
+          }
+        ],
+        [
+          "5kΩ",
+          1,
+          "R1206",
+          "R3",
+          {
+            "Manufacturer Part": "QR1206J10K0P05Z",
+            "Manufacturer": "EVER OHMS(天二科技)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C176266"
+          }
+        ],
+        [
+          "10D561K",
+          1,
+          "RES-TH_L13.0-W6.0-P7.50-D0.9-S6.00",
+          "R5",
+          {
+            "Manufacturer Part": "10D561K",
+            "Manufacturer": "HEL(鸿志)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C113236"
+          }
+        ],
+        [
+          "DSIC03LHGET",
+          1,
+          "SW-TH_6P-L9.2-W9.9-P2.54-LS7.6_2",
+          "SW1",
+          {
+            "Manufacturer Part": "DSIC03LHGET",
+            "Manufacturer": "YE",
+            "Supplier": "LCSC",
+            "Supplier Part": "C57448"
+          }
+        ],
+        [
+          "ATTINY85-20PU",
+          1,
+          "PDIP-8_L9.3-W6.4-P2.54-LS7.9-BL-1",
+          "U1",
+          {
+            "Manufacturer Part": "ATTINY85-20PU",
+            "Manufacturer": "MICROCHIP(美国微芯)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C965497"
+          }
+        ],
+        [
+          "WCS1800",
+          1,
+          "SENSOR-TH_WCS1800",
+          "U2",
+          {
+            "Manufacturer Part": "WCS1800",
+            "Manufacturer": "null",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9900070526"
+          }
+        ],
+        [
+          "HLK-5M05",
+          1,
+          "PWRM-TH_HLK-5M05",
+          "U3",
+          {
+            "Manufacturer Part": "HLK-5M05",
+            "Manufacturer": "HI-LINK(海凌科)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C209907"
+          }
+        ],
+        [
+          "RF433MHZ Transmitter",
+          1,
+          "RF433MHZ TRANSMITTER",
+          "U4",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "PAD-ROUND_2x1",
+          1,
+          "PADPAD",
+          "U9",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ],
+        [
+          "PTF-77-B",
+          1,
+          "FUSE-TH_L25.2-W9.8_PTF-77-B",
+          "U11",
+          {
+            "Manufacturer Part": "PTF-77-B",
+            "Manufacturer": "XFCN(兴飞)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C22465955"
+          }
+        ]
+      ],
+      "updateTime": 1728853196,
+      "createTime": 1727515844,
+      "histories": [],
+      "created_at": "2024-09-28 11:30:44",
+      "updated_at": "2024-10-13 22:59:56"
+    },
+    {
+      "uuid": "9cdc5a087f922b2d44073ed7f3a0c7e7",
+      "puuid": "3149c511aec660799caf1891edcabc63",
+      "title": "PCB_MAGIC-HOVER-TRANS",
+      "filename": "PCB_MAGIC-HOVER-TRANS.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "ebcab24f32e94bdf8f9aaf3b7b4c189f": 4,
+        "26ad6817f41140f0a90bb74acdeab010": 1,
+        "148de89c6add4b2ca164f49e7433446f": 1,
+        "55cb1241489746e7ad2de5a096e18cb4": 1,
+        "2baa3f4a5e0c463797c0cba39bf0552d": 1,
+        "7bdec8012728462a85919a4d0d033579": 1,
+        "8e9b1be4bcb6420dbd1d09bf04b02792": 4,
+        "3744bcbe1f464b01ae180f32d7d4b0c4": 1,
+        "de5ae6293ec74ce6883a9ccc6a3d2f66": 1,
+        "14910ce6e0624723b07b534f2e4f462f": 1,
+        "807aed9c43d146dda80a8b911c02c083": 1,
+        "2a95501440544c1bb3fdff056a517a60": 1,
+        "97f393699adb4b7aaca62f5fa49a9de0": 1,
+        "5cde33107cd745168ebef6b5d5310faf": 1
+      },
+      "BOM": [],
+      "updateTime": 1728855920,
+      "createTime": 1727643167,
+      "histories": [],
+      "created_at": "2024-09-29 22:52:47",
+      "updated_at": "2024-10-13 23:45:20"
+    }
+  ],
+  "sort": [],
+  "title": "MAGIC-HOOVER-TRANS",
+  "foldername": "MAGIC-HOOVER-TRANS",
+  "schfilename": "MAGIC-HOOVER-TRANS.json",
+  "schfilemtime": 1728853196122
+}

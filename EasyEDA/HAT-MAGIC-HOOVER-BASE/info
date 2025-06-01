@@ -1,0 +1,142 @@
+{
+  "uuid": "fb19e319f795af137c41c319e476dc94",
+  "path": "Offline/HAT-MAGIC-HOOVER-BASE",
+  "name": "HAT-MAGIC-HOOVER-BASE",
+  "content": "",
+  "created_at": "2024-09-30 21:50:59",
+  "updated_at": "2024-10-14 00:37:27",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "08d9bb1e6550239c0008f8a20de404df",
+      "title": "SCHEMA-MAGIC-HOOVER-BASE",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "633664313e5b437385deaf18a567eaf5": 1,
+        "d7704dbd3e644b0096f77f4e9d773bac": 1,
+        "02f414c4b52a41c3a754229a031016f4": 1,
+        "027157e408e84fadbd8d9d10bcd5ea0e": 2,
+        "c996990367134df4854174670f257897": 1,
+        "367c92fde5d74e1284c31e87f5fef32f": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "Header-Male-2.54_1x2",
+          1,
+          "HDR-TH_2P-P2.54-V-M-1",
+          "H1",
+          {
+            "Manufacturer Part": "826629-2",
+            "Manufacturer": "TE Connectivity(泰科电子)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C86471"
+          }
+        ],
+        [
+          "HEADER-FEMALE-2.54_2X6 COPY",
+          2,
+          "HDR-TH_12P-P2.54-V-F-R2-C6-S2.54",
+          "H2,H3",
+          {
+            "Manufacturer Part": "2.54-2*6P母",
+            "Manufacturer": "BOOMELE(博穆精密)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C36191"
+          }
+        ],
+        [
+          "BZX85C5V1-TR",
+          1,
+          "DO-41_BD1.9-L3.3-P7.30-D0.8-RD",
+          "U1",
+          {
+            "Manufacturer Part": "BZX85C5V1-TR",
+            "Manufacturer": "VISHAY(威世)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C3000843"
+          }
+        ],
+        [
+          "RXB1-433M",
+          1,
+          "WIRELM-TH_RXB1-433M",
+          "U2",
+          {
+            "Manufacturer Part": "RXB1-433M",
+            "Manufacturer": "DreamLNK(骏晔科技)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C717940"
+          }
+        ],
+        [
+          "10kΩ",
+          1,
+          "R1206",
+          "U3",
+          {
+            "Manufacturer Part": "HR1206J10K0P05Z",
+            "Manufacturer": "EVER OHMS(天二科技)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C175515"
+          }
+        ],
+        [
+          "PAD-ROUND_2x1",
+          1,
+          "PADPAD",
+          "U9",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1727900313,
+      "createTime": 1727725859,
+      "histories": [],
+      "created_at": "2024-09-30 21:50:59",
+      "updated_at": "2024-10-02 22:18:33"
+    },
+    {
+      "uuid": "3e5b92c4278b833e475b13119ace508f",
+      "puuid": "fb19e319f795af137c41c319e476dc94",
+      "title": "PCB_HAT-MAGIC-HOOVER-BASE",
+      "filename": "PCB_HAT-MAGIC-HOOVER-BASE.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7ae61b24ec5d431087f34ea7cfebbd9e": 1,
+        "973792dff34247adbb6d6040cd1de5ac": 1,
+        "433769352e614e44aca9a2ddf0d4f3e4": 1,
+        "5cde33107cd745168ebef6b5d5310faf": 1,
+        "cbee40bdbf73496a8a63016339885880": 2,
+        "8e9b1be4bcb6420dbd1d09bf04b02792": 1
+      },
+      "BOM": [],
+      "updateTime": 1728859047,
+      "createTime": 1727726381,
+      "histories": [],
+      "created_at": "2024-09-30 21:59:41",
+      "updated_at": "2024-10-14 00:37:27"
+    }
+  ],
+  "sort": [],
+  "title": "HAT-MAGIC-HOOVER-BASE",
+  "foldername": "HAT-MAGIC-HOOVER-BASE",
+  "schfilename": "HAT-MAGIC-HOOVER-BASE.json",
+  "schfilemtime": 1727900313134
+}

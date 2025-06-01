@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>MAGIC-HOOVER</title>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <link rel="icon" type="image/png" href="./img/256-magic_hoover.png">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+</head>
+
+<body>
+    <div id="global">
+        <header>
+            <div><img src="./img/256-magic_hoover.png"></div>
+            <div><span>MAGIC HOOVER</span></div>
+            <div id="reset"><button onclick="save('reset')">Reset</button></div>
+        </header>
+
+
+        <div id="contenue">
+        </div>
+        <footer>
+
+            <div class="txt_footer">© Copyright 2025 <a href="https://www.youtube.com/@SMHOSY" target="_blank">ADS -
+                    l'atelier de SMHOSY</a>. Tous droits réservés. Développé par <a href="https://www.smhosy.fr/"
+                    target="_blank">SMHOSY</a>. Propulsé par ESP8266.</div>
+
+        </footer>
+    </div>
+</body>
+
+<script language="JavaScript" name="script">
+    // fonction des mise a jour des champ au chargement et apres changement
+    function load() {
+        let ref_voltage = document.querySelector("#val_tension").value;
+        for (let i = 0; i < 8; i++) {
+
+            let id_trigger_on = "#val_trigger_on_ma_" + i;
+            id_trigger_on = document.querySelector(id_trigger_on);
+            let val_result_watt = "#val_trigger_on_watt_" + i;
+            let slide_result_watt = "#slide_trigger_on_watt_" + i;
+            let result_watt = Math.round(ref_voltage * (id_trigger_on.value / 1000));
+            document.querySelector(val_result_watt).value = result_watt;
+            document.querySelector(slide_result_watt).value = result_watt;
+        }
+    }
+
+    // Fonction de lise a jour des slider avc champs number
+    function maj(id, input_val) {
+        document.querySelector('#' + input_val).value = id.value;
+    }
+
+    // fonction de mise a jour du champ cacher des milli ampere
+    function maj_ma(id) {
+
+        let ref_voltage = document.querySelector("#val_tension").value;
+        let val_watt = document.querySelector("#val_trigger_on_watt_" + id).value;
+        let result_ma = Math.round((val_watt / ref_voltage) * 1000);
+        if (result_ma <= 500) {
+            result_ma = 500;
+        }
+        document.querySelector("#val_trigger_on_ma_" + id).value = result_ma;
+        load();
+    }
+
+    // fonction de mise a jour du champ cacher des milli seconde
+    function maj_ma(id) {
+
+        let ref_voltage = document.querySelector("#val_tension").value;
+        let val_watt = document.querySelector("#val_trigger_on_watt_" + id).value;
+        let result_ma = Math.round((val_watt / ref_voltage) * 1000);
+        if (result_ma <= 500) {
+            result_ma = 500;
+        }
+        document.querySelector("#val_trigger_on_ma_" + id).value = result_ma;
+        load();
+    }
+
+    // fonction de chargement des info du fichier de config
+    async function load_data() {
+        const response = await fetch('./config.json', {
+            method: "GET",
+            cache: "no-cache",
+            headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        });
+    
+        const data = await response.json();
+        // affichage de la ligne voltage
+        let contenue = '<div class="tension" style="direction: ltr;">';
+        contenue += '<table style="width: 98%;">';
+        contenue += '<tbody>';
+        contenue += '<tr>';
+        contenue += '<td style="text-align: right;">Tension de référence :</td>';
+        contenue += '<td style="text-align: right; width: 80px;"><input type="number" id="val_tension" min="210"max="250" step="1" value="' + data.ref_voltage + '" oninput="maj(this,\'slide_tension\'); load()"></td>';
+        contenue += '<td style="text-align: right; width: 70px;">volts</td>';
+        contenue += '<td style="text-align: right; width: 270px;"><input type="range" class="slider" id="slide_tension" min="210" max="250" step="1" value="' + data.ref_voltage + '" oninput="maj(this,\'val_tension\'); load()">';
+        contenue += '<td style="text-align: right;"><button onclick="save(\'tension\')">Valider</button></td>';
+        contenue += '</tr>';
+        contenue += '</tbody>';
+        contenue += '</table>';
+        contenue += '</div>';
+
+        // on prepare les table des modules
+        for (let i = 0; i < 8; i++) {
+            contenue += '<div id="id_' + i + '" class="box_adr ' + (data.connected[i] == 1 ? "connect" : "") + '">';
+            contenue += '<table>';
+            contenue += '<tbody>';
+            contenue += '<tr>';
+            contenue += '<td colspan="2">Module esclave : <span id="txt_adr_' + i + '">' + (i + 1) + '</span></td>';
+            contenue += '<td colspan="2" style="text-align: right;"><button onclick="save(\'module\',' + i + ')">Valider</button></td>';
+            contenue += '</tr>';
+            contenue += '<tr>';
+            contenue += '<td>Seuil de déclenchement</td>';
+            contenue += '<td style="width: 100px;"><input type="number" id="val_trigger_on_watt_' + i + '" min="100" max="3500" step="50" oninput="maj(this,\'slide_trigger_on_watt_' + i + '\'), maj_ma(' + i + ')"> <input type="hidden" id="val_trigger_on_ma_' + i + '" value="' + data.triggerOn[i] + '"></td>';
+            contenue += '<td style="width: 120px;">Watts</td>';
+            contenue += '<td style="text-align: right;width: 270px;"><input type="range" class="slider" id="slide_trigger_on_watt_' + i + '" value="150" min="100" max="3500" step="50" oninput="maj(this,\'val_trigger_on_watt_' + i + '\'), maj_ma(' + i + ')"></td>';
+            contenue += '</tr>';
+            contenue += '<tr>';
+            contenue += '<td>Temporisation d\'arret</td>';
+            contenue += '<td><input type="number" id="val_trigger_off_sec_' + i + '" value="' + (data.triggerOff[i] / 1000) + '" min="1" max="10" step="0.5" oninput="maj(this,\'slide_trigger_off_sec_' + i + '\')"></td>';
+            contenue += '<td>Secondes</td>';
+            contenue += '<td style="text-align: right;"><input type="range" class="slider" id="slide_trigger_off_sec_' + i + '" value="' + (data.triggerOff[i] / 1000) + '" min="1" max="10" step="0.5" oninput="maj(this,\'val_trigger_off_sec_' + i + '\')"></td>';
+            contenue += '</tr>';
+            contenue += '</tbody>';
+            contenue += '</table>';
+            contenue += '</div>';
+        }
+        // on affiche les donnée
+        document.querySelector('#contenue').innerHTML = contenue;
+        // on mets a jour les input et slide
+        load();
+    }
+
+    // fonction d'affichage des modules connectés
+    async function connect() {
+        const response = await fetch('./connect',{
+            method: "GET",
+            cache: "no-cache",
+            headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }
+        });
+        const data = await response.json();
+        for (let i = 0; i < 8; i++) {
+            if (data.connected[i] == 1) {
+                document.querySelector("#id_" + i).classList.add('connect');
+            }
+            else {
+                document.querySelector("#id_" + i).classList.remove('connect');
+
+            }
+        }
+    }
+
+    // fonction d'enregistrement des données et reset
+    async function save(objet, id = 0) {
+        let path;
+        if (objet == "reset") {
+            path = "save?action=reset";
+        }
+        if (objet == "tension") {
+            path = "save?ref_voltage=" + document.querySelector("#val_tension").value;
+        }
+        if (objet == "module") {
+            path = "save?id=" + id;
+            path += "&trigger_on=" + document.querySelector("#val_trigger_on_ma_" + id).value;
+            path += "&trigger_off=" + document.querySelector("#val_trigger_off_sec_" + id).value * 1000;
+        }
+        let response = await fetch(path);
+        const data = await response.json();
+
+    }
+
+    // on charge les données apres le chargement de la page
+    setTimeout(() => {
+        load_data();
+    }, 500);
+
+    // on verifie l'état des module connecté tous les 2 seconde
+    setInterval(() => {
+        connect();
+    }, 2000);
+</script>
+
+</html>
